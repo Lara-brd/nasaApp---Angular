@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NasarRoutingModule } from './nasa-routing.module';
+
 import { HomeComponent } from './pages/home/home.component';
+import { NasaRoutingModule } from './nasa-routing.module';
+import { MaterialModule } from '../material/material.module';
 
 
 
@@ -11,7 +13,9 @@ import { HomeComponent } from './pages/home/home.component';
   ],
   imports: [
     CommonModule,
-    NasarRoutingModule
+    NasaRoutingModule,
+    MaterialModule
+
   ]
 })
 export class NasaModule { }

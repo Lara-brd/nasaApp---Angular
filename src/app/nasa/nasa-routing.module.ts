@@ -8,8 +8,8 @@ import { LibraryComponent } from './pages/library/library.component';
 const routes:Routes =[
   {
     path:'',
+    component:HomeComponent,
     children:[
-      { path:'home', component:HomeComponent },
       { path:'apod', component: ApodComponent },
       { path:'library', component:LibraryComponent},
       { path:'**', redirectTo:'home'}
@@ -27,4 +27,4 @@ const routes:Routes =[
     RouterModule
   ]
 })
-export class NasarRoutingModule { }
+export class NasaRoutingModule { }

@@ -1,4 +1,57 @@
-<p>esto es home</p>
-<router-outlet></router-outlet>
+<!-- <p>esto es home</p>
+
+
 
 <a routerLink="/nasa/apod">apod</a>
+<router-outlet></router-outlet> -->
+
+
+<mat-sidenav-container fullscreen>
+
+  <!-- sidenav -->
+  <mat-sidenav #sidenav mode="push">
+    <mat-toolbar color="primary">
+      <span>Menú</span>
+      <span class="spacer"></span>
+      <button mat-icon-button
+              (click)="sidenav.toggle()">
+        <mat-icon mat-list-icon>menu</mat-icon>
+      </button>
+    </mat-toolbar>
+
+    <!-- listado -->
+    <mat-nav-list>
+
+      <a routerLink="./apod"
+      mat-list-item>
+        <mat-icon mat-list-icon>label</mat-icon>
+        <span>apod</span>
+      </a>
+
+      <a routerLink="./apod"
+      mat-list-item>
+        <mat-icon mat-list-icon>add</mat-icon>
+        <span>añadir</span>
+      </a>
+
+    </mat-nav-list>
+
+  </mat-sidenav>
+
+  <!-- no sidenav -->
+  <mat-toolbar>
+    <button mat-icon-button
+            (click)="sidenav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+
+    <span class="spacer"></span>
+
+    <button mat-button>
+      logout
+    </button>
+  </mat-toolbar>
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
+</mat-sidenav-container>

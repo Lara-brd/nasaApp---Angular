@@ -6,6 +6,7 @@ import { LibraryComponent } from './nasa/pages/library/library.component';
 import { ApodComponent } from './nasa/pages/apod/apod.component';
 import { ErrorPageComponent } from './shared/error-page/error-page.component';
 import { AppRoutesModule } from './app-routes.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { AppRoutesModule } from './app-routes.module';
   ],
   imports: [
     BrowserModule,
-    AppRoutesModule
+    AppRoutesModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
