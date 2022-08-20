@@ -1,13 +1,6 @@
-<!-- <p>esto es home</p>
 
 
-
-<a routerLink="/nasa/apod">apod</a>
-<router-outlet></router-outlet> -->
-
-
-<mat-sidenav-container fullscreen>
-
+<mat-sidenav-container fullscreen [hasBackdrop]="false">
   <!-- sidenav -->
   <mat-sidenav #sidenav mode="push">
     <mat-toolbar color="primary">
@@ -15,24 +8,38 @@
       <span class="spacer"></span>
       <button mat-icon-button
               (click)="sidenav.toggle()">
-        <mat-icon mat-list-icon>menu</mat-icon>
+        <mat-icon mat-list-icon></mat-icon>
       </button>
     </mat-toolbar>
 
     <!-- listado -->
     <mat-nav-list>
 
-      <a routerLink="./apod"
-      mat-list-item>
+      <a  routerLink="./pictDay"
+          mat-list-item>
         <mat-icon mat-list-icon>label</mat-icon>
-        <span>apod</span>
+        <span>Picture of the day</span>
       </a>
 
-      <a routerLink="./apod"
-      mat-list-item>
-        <mat-icon mat-list-icon>add</mat-icon>
-        <span>añadir</span>
+      <a  routerLink="./pictRandom"
+          mat-list-item>
+        <mat-icon mat-list-icon>label</mat-icon>
+        <span>Random Pictures</span>
       </a>
+
+      <a  routerLink="./pictDate"
+          mat-list-item>
+        <mat-icon mat-list-icon>label</mat-icon>
+        <span>Picture by date</span>
+      </a>
+
+      <a  routerLink="./library"
+          mat-list-item>
+        <mat-icon mat-list-icon>label</mat-icon>
+        <span>Library</span>
+      </a>
+
+
 
     </mat-nav-list>
 
