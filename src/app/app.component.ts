@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, HostBinding } from '@angular/core';
+import { OverlayContainer} from '@angular/cdk/overlay';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'nasaApp';
+
+  @HostBinding('class')componentCssClass:any;
+
+  constructor( public overlayContainer:OverlayContainer){}
+
+
+  public onSetTheme(e:string){
+    this.overlayContainer.getContainerElement().classList.add(e);
+    this.componentCssClass = e;
+  }
+
 }

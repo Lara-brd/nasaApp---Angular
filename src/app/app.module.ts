@@ -8,20 +8,31 @@ import {HttpClientModule} from '@angular/common/http'
 import { AppComponent } from './app.component';
 import { ApodComponent } from './nasa/pages/apod/apod.component';
 import { ErrorPageComponent } from './shared/error-page/error-page.component';
+import { MainComponent } from './shared/main/main.component';
+import { BtnThemeComponent } from './shared/btn-theme/btn-theme.component';
+
+
 import { FormsModule } from '@angular/forms';
+import { MaterialModule } from './material/material.module';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     ApodComponent,
-    ErrorPageComponent
+    ErrorPageComponent,
+    MainComponent,
+    BtnThemeComponent
   ],
   imports: [
     AppRoutesModule,
     BrowserAnimationsModule,
     BrowserModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MaterialModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

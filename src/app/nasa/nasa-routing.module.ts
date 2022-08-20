@@ -22,7 +22,7 @@ const routes:Routes =[
       { path:'pictSelected', component:PictSelectedComponent},
       { path:'pictDate', component:PictDateComponent},
       { path:'library', component:LibraryComponent },
-      { path:'**', redirectTo:'library'}
+      { path:'**', redirectTo:'pictDay'}
     ]
   }
 ]

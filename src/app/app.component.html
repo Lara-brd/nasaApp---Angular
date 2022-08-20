@@ -1,1 +1,12 @@
-<router-outlet></router-outlet>
+
+
+<div class="vh-100 mat-app-background">
+<!-- todoy hacer componente para botones -->
+  <div class="example-button-row">
+      <button mat-raised-button (click)="onSetTheme('myDark-theme')">Dark theme</button>
+      <button mat-raised-button (click)="onSetTheme('myLight-theme')">Light theme</button>
+    </div>
+
+  <router-outlet></router-outlet>
+
+</div>
