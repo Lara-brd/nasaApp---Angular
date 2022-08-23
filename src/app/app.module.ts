@@ -8,12 +8,14 @@ import {HttpClientModule} from '@angular/common/http'
 import { AppComponent } from './app.component';
 import { ApodComponent } from './nasa/pages/apod/apod.component';
 import { ErrorPageComponent } from './shared/error-page/error-page.component';
-import { MainComponent } from './shared/main/main.component';
 import { BtnThemeComponent } from './shared/btn-theme/btn-theme.component';
 
 
 import { FormsModule } from '@angular/forms';
 import { MaterialModule } from './material/material.module';
+import { SharedModule } from './shared/shared.module';
+
+
 
 
 
@@ -22,8 +24,8 @@ import { MaterialModule } from './material/material.module';
     AppComponent,
     ApodComponent,
     ErrorPageComponent,
-    MainComponent,
-    BtnThemeComponent
+    BtnThemeComponent,
+
   ],
   imports: [
     AppRoutesModule,
@@ -32,7 +34,7 @@ import { MaterialModule } from './material/material.module';
     FormsModule,
     HttpClientModule,
     MaterialModule,
-
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]

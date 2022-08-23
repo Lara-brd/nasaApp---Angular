@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Picture } from '../../interfaces/picture.interface';
+import { Router } from '@angular/router';
 import { AstronomyService } from '../../services/astronomy.service';
 
 @Component({
@@ -9,12 +9,22 @@ import { AstronomyService } from '../../services/astronomy.service';
 })
 export class PictSelectedComponent implements OnInit {
 
-  pictureSelected!:Picture;
 
-  constructor( private _astronomyService:AstronomyService) { }
+  get picture(){
+    return this._astronomyService.picture;
+  }
+
+  link:string = "/nasa/pictRandom";
+
+  isVideo:boolean = false;
+
+  constructor(  private _astronomyService:AstronomyService,
+                private _router:Router) { }
 
   ngOnInit(): void {
-    this.pictureSelected =  this._astronomyService.pictureSelected;
+
   }
+
+
 
 }

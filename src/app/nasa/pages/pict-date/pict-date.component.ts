@@ -20,8 +20,10 @@ export class PictDateComponent implements OnInit {
 
 
   get picture(){
-    return this._AstronomyService.pictureDate
+    return this._AstronomyService.picture;
   }
+
+
 
 
   fecha!:Date;
@@ -53,6 +55,7 @@ export class PictDateComponent implements OnInit {
     this.fechaSended = true;
     const data = this.formatDate();
     this._AstronomyService.setPictureByDate(data); 
+    console.log(this.picture)
 
   }
 
@@ -64,7 +67,7 @@ export class PictDateComponent implements OnInit {
   formatDate(){
     return [
       this.fecha.getFullYear(),
-      this.fecha.getMonth(),
+      this.fecha.getMonth()+1,
       this.fecha.getDate(),
     ].join('-');
   }

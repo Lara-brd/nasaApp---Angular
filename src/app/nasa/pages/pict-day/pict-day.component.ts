@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { Picture } from '../../interfaces/picture.interface';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { AstronomyService } from '../../services/astronomy.service';
 
 @Component({
@@ -9,17 +8,16 @@ import { AstronomyService } from '../../services/astronomy.service';
 
   `]
 })
-export class PictDayComponent implements OnInit {
-
-  picture!:Picture;
+export class PictDayComponent implements OnInit, OnDestroy {
 
   constructor( private _astronomyService:AstronomyService) { }
 
   ngOnInit(): void {
-    this._astronomyService.getPictureDay()
-      .subscribe(data => {
-        this.picture = data;
-      })
+    this._astronomyService.setPictureDay();
+  }
+
+  ngOnDestroy() {
+    // this._astronomyService;
   }
 
 }

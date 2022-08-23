@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { HomeComponent } from './pages/home/home.component';
 import { NasaRoutingModule } from './nasa-routing.module';
 import { MaterialModule } from '../material/material.module';
 import { BigImageComponent } from './components/big-image/big-image.component';
@@ -12,6 +11,8 @@ import { PictSelectedComponent } from './pages/pict-selected/pict-selected.compo
 import { PictDayComponent } from './pages/pict-day/pict-day.component';
 import { PictDateComponent } from './pages/pict-date/pict-date.component';
 import { FormsModule } from '@angular/forms';
+import { VideoComponent } from './components/video/video.component';
+import { HomeApodComponent } from './pages/homeApod/homeApod.component';
 
 
 
@@ -21,14 +22,15 @@ import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
-    HomeComponent,
     BigImageComponent,
+    HomeApodComponent,
     LibraryComponent,
     PictRandomComponent,
     CardComponent,
     PictSelectedComponent,
     PictDayComponent,
-    PictDateComponent
+    PictDateComponent,
+    VideoComponent
   ],
   imports: [
     CommonModule,

@@ -25,8 +25,7 @@ export class PictRandomComponent implements OnInit {
   }
 
   getPicture(pict:Picture){
-    this._astronomyService.pictureSelected = pict;
-    console.log(this._astronomyService.pictureSelected);
+    this._astronomyService.picture = pict;
     this.router.navigate(['/nasa/pictSelected'])
   }
 

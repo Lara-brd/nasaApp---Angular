@@ -3,15 +3,15 @@ import { Component, OnInit } from '@angular/core';
 import { AstronomyService } from '../../services/astronomy.service';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
+  selector: 'app-homeApod',
+  templateUrl: './homeApod.component.html',
   styles: [`
   .container{
     margin:10px;
   }
 `]
 })
-export class HomeComponent implements OnInit {
+export class HomeApodComponent implements OnInit {
 
   constructor() { }
 

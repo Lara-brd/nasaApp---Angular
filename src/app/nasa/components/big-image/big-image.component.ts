@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Picture } from '../../interfaces/picture.interface';
+import { Router } from '@angular/router';
+import { AstronomyService } from '../../services/astronomy.service';
 
 
 @Component({
@@ -9,13 +10,23 @@ import { Picture } from '../../interfaces/picture.interface';
 })
 export class BigImageComponent implements OnInit {
 
-  @Input() picture!:Picture;
-  @Input() buttonText:string = '';
-  @Input() link:string = ''
+  get picture(){
+    return this._astronomyService.picture;
+  }
 
-  constructor() { }
+  @Input() buttonText:string ='';
+  @Input() link:string ='';
 
-  ngOnInit(): void {
+
+  constructor(  private _astronomyService:AstronomyService,
+                private _router:Router) {
+  }
+  
+  ngOnInit(): void {  
+  }
+
+  onGo(){
+    this._router.navigate([`${this.link}`]);
   }
 
 }

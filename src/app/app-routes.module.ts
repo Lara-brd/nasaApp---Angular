@@ -3,12 +3,13 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { ErrorPageComponent } from './shared/error-page/error-page.component';
 import { BtnThemeComponent } from './shared/btn-theme/btn-theme.component';
-import { MainComponent } from './shared/main/main.component';
+import { HomeComponent } from './shared/home/home.component';
+
 
 const routes:Routes =[
   {
     path:'',
-    component:MainComponent
+    component:HomeComponent
   },
   {
     path:'nasa',
@@ -17,10 +18,6 @@ const routes:Routes =[
   {
     path:'404',
     component:ErrorPageComponent
-  },
-  {
-    path:'main',
-    component:MainComponent
   },
   {
     path:'btnTheme',

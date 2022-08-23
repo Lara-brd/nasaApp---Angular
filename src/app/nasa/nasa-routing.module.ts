@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './pages/home/home.component';
+import { HomeApodComponent } from './pages/homeApod/homeApod.component';
 import { ApodComponent } from './pages/apod/apod.component';
 
 
@@ -14,7 +14,7 @@ import { PictDateComponent } from './pages/pict-date/pict-date.component';
 const routes:Routes =[
   {
     path:'',
-    component:HomeComponent,
+    component:HomeApodComponent,
     children:[
       { path:'apod', component: ApodComponent },
       { path:'pictRandom', component:PictRandomComponent},
